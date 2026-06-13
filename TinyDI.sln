@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyDI", "src\TinyDI.csproj", "{66CFDDB9-281A-42B9-A35C-6A46DD2FE690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{88B6FA64-02A6-4BFE-9BB4-FFF9265C66C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A8167D44-24A7-4926-8FB8-3919076C2033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyDI.Tests", "tests\TinyDI.Tests\TinyDI.Tests.csproj", "{0C147B46-3962-4021-8D34-837A4B3417B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66CFDDB9-281A-42B9-A35C-6A46DD2FE690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CFDDB9-281A-42B9-A35C-6A46DD2FE690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CFDDB9-281A-42B9-A35C-6A46DD2FE690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CFDDB9-281A-42B9-A35C-6A46DD2FE690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C147B46-3962-4021-8D34-837A4B3417B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C147B46-3962-4021-8D34-837A4B3417B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C147B46-3962-4021-8D34-837A4B3417B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C147B46-3962-4021-8D34-837A4B3417B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66CFDDB9-281A-42B9-A35C-6A46DD2FE690} = {88B6FA64-02A6-4BFE-9BB4-FFF9265C66C7}
+		{0C147B46-3962-4021-8D34-837A4B3417B2} = {A8167D44-24A7-4926-8FB8-3919076C2033}
+	EndGlobalSection
+EndGlobal
