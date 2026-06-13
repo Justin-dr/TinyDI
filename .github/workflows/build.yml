@@ -42,7 +42,7 @@ jobs:
         uses: NuGet/login@v1
         id: login
         with:
-          user: ${{secrets.NUGET_USER}}
+          user: ${{ github.repository_owner }}
       
       # Push the package
       - name: NuGet push
