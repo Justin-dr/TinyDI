@@ -12,15 +12,20 @@
         <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
         <DevelopmentDependency>true</DevelopmentDependency>
 
-        <PackageId>Xepos.TinyDI</PackageId>
-        <Version>0.1.3</Version>
-        <Authors>Xepos</Authors>
-        <Description>A tiny source-generated DI container.</Description>
+        <PackageId>Justindr.TinyDI</PackageId>
+        <Authors>Justin de Ruijter</Authors>
+        <Description>A tiny static source-generated DI container.</Description>
 
+        <MinVerDefaultPreReleaseIdentifiers>dev</MinVerDefaultPreReleaseIdentifiers>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" PrivateAssets="all" />
+
+        <PackageReference Include="MinVer" Version="7.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
