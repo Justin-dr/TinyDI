@@ -1,0 +1,46 @@
+name: Publish to NuGet
+
+on:
+  workflow_dispatch: 
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # enable GitHub OIDC token issuance for this job
+    
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+            
+      - name: Restore
+        run: dotnet restore
+          
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+          
+      - name: Test
+        run: dotnet test --configuration Release --no-build
+          
+      - name: Pack
+        run: dotnet pack src/TinyDI.csproj --configuration Release --no-build --output artifacts
+      
+      - name: NuGet login
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{secrets.NUGET_USER}}
+      
+      - name: NuGet push
+        run: dotnet nuget push artifacts/Xepos.TinyDI.*.nupkg --api-key ${{steps.login.outputs.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
